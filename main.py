@@ -89,6 +89,8 @@ def show_main_page():
             )
             st.pyplot(f)
             st.write(
+                "The correlation matrix illustrates the relationships between different" 
+                "numerical features such as year, selling price, km driven, mileage, engine, max power, and seats."
                 "From the chart, it is clear that `engine` and `max_power` are most correlated, "
                 "which makes sense since peak engine power is directly dependent on engine volume."
             )
