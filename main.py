@@ -102,7 +102,12 @@ def show_main_page():
             plt.xlabel('Mileage (km)')
             plt.ylabel('Selling Price (selling_price)')
             st.pyplot(plt)
-            st.write("As mileage increases, the selling price typically decreases")
+            st.write(
+                "The scatter plot illustrates the relationship between the sale price of cars and their mileage (kilometers driven)." 
+                "The chart indicates that cars with lower mileage generally maintain higher sale prices, while higher mileage"
+                "corresponds to a wider spread in pricing but tends to lower values. The plot underscores the negative correlation" 
+                "between mileage and sale price, highlighting how usage impacts car value."
+            )
 
             st.write("### Fuel Type Distribution")
             types_fuel = df_v1["fuel"].unique()
@@ -111,6 +116,7 @@ def show_main_page():
             ax.pie(x_fuel, labels=types_fuel, autopct="%1.1f%%", startangle=90)
             ax.set_title("Fuel Type Distribution")
             st.pyplot(f)
+            st.write("### Fuel Type Distribution")
 
         with col2:
             st.write("### Seller Type Distribution")
