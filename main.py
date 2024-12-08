@@ -132,7 +132,10 @@ def show_main_page():
             ax.set_title("Seller Type Distribution")
             st.pyplot(f)
             st.write(
-                "It is clear that used cars are most often sold by individual sellers"
+                "The pie chart displays the distribution of seller types for used cars. 
+                "It highlights that the majority of cars are sold by individual sellers, accounting for 83.2% of the market."
+                "Dealers represent 13.8% of the sales, while Trustmark Dealers account for a smaller portion at 2.9%." 
+                "This indicates that individual sellers dominate the used car market."
             )
 
             st.write("### Record Count by Company")
