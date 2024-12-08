@@ -70,6 +70,9 @@ def show_main_page():
     st.write("name -> Company, Model; Mileage transform; Engine transform; Max_power transform;")
     df_v1 = pd.read_csv('data/data_preproc_v1.csv')
     st.write(df_v1.head(5))
+    
+    st.write("###Main numerical characteristics")
+    st.write(df.describe())
 
     with st.expander("EDA", expanded=True):
         col1, col2 = st.columns(2)
