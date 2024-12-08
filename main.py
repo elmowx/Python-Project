@@ -73,6 +73,9 @@ def show_main_page():
     
     st.write("### Main numerical characteristics")
     st.write(df.describe())
+    
+    st.write("### Categorical Characteristics")
+    st.write(df.describe(include='object'))
 
     with st.expander("EDA", expanded=True):
         col1, col2 = st.columns(2)
