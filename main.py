@@ -204,6 +204,16 @@ def show_main_page():
         )
 
     st.write("### Dataset for Model Training")
+    st.markdown(
+        """
+        **How was the dataset processed?**
+        - Categorical attributes like “owner”, “fuel”, “seller_type”, “transmission”, “name” were replaced with numeric values. For example the value of “Diesel” was replaced with “1.0” and “Petrol” with “2.0”.
+        - The “mileage” attribute contains values in km/kg and kmpl. For preprocessing km/kg were converted to kmpl.
+        - For the engine and max_power attributes, the lowercase values were removed from the end.
+        - The attribute “torque” was removed because it was difficult to process it.           
+        """
+    )
+
     st.write("[owner, fuel, seller_type, transmission, name] -> to digits\n")
     df_v2 = pd.read_csv('data/data_preproc_v2.csv')
     st.write(df_v2.head(5))
