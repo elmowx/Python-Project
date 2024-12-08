@@ -162,7 +162,10 @@ def show_main_page():
             ax.set_title("Transmission Type Distribution")
             st.pyplot(f)
 
-            st.write("Most cars have a manual transmission, which makes up 87.1% of the total. This may indicate a wider distribution of manual gearboxes, especially in the used car market.")
+            st.write(
+                "The pie chart shows the distribution of transmission types among the vehicles. Manual transmissions are overwhelmingly popular, comprising 87.1% of the cars." 
+                "Automatic transmissions make up 12.9%. This suggests a strong preference for manual transmission in the dataset."
+            )
 
         st.write("### Comparison of Price Distributions for Different Fuel Types")
         plt.figure(figsize=(10, 5))
