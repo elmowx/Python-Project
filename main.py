@@ -144,6 +144,12 @@ def show_main_page():
             ax.set_ylabel("Count")
             ax.set_xticklabels(companies, rotation=75)
             st.pyplot(f)
+            st.write(
+                "The bar chart displays the quantity of purchased cars available from various brands."
+                "Maruti leads with the highest number of cars, surpassing 2000 units."
+                "Skoda, Hyundai, and Toyota follow, each with a significant quantity. 
+                "The chart highlights a stark drop-off in quantity as the list progresses to less common brands like Jaguar, Volvo, and Peugeot."
+            )
 
             st.write("### Transmission Type Distribution")
             types_transmission = df_v1["transmission"].unique()
