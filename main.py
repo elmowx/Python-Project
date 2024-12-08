@@ -147,7 +147,7 @@ def show_main_page():
             st.write(
                 "The bar chart displays the quantity of purchased cars available from various brands."
                 "Maruti leads with the highest number of cars, surpassing 2000 units."
-                "Skoda, Hyundai, and Toyota follow, each with a significant quantity. 
+                "Skoda, Hyundai, and Toyota follow, each with a significant quantity." 
                 "The chart highlights a stark drop-off in quantity as the list progresses to less common brands like Jaguar, Volvo, and Peugeot."
             )
 
