@@ -231,7 +231,14 @@ def show_main_page():
         plt.xlabel("Fuel Type")
         plt.ylabel("Selling Price")
         st.pyplot(plt)
-        st.write("From the chart, it is evident that diesel cars have a wide range of prices. Most cars fall in the price range around 0.2")
+        st.markdown(
+            """
+            **This box plot illustrates the selling price distribution across various fuel types: Diesel, Petrol, LPG, and CNG. The chart reveals:**
+            - Diesel cars exhibit a wide range of prices, with most prices concentrated around 0.2 million.
+            - Petrol vehicles also show a moderate price variation but with fewer outliers compared to diesel.
+            - LPG and CNG cars have more compressed price ranges with significantly fewer outlying values.
+            """
+        )
 
         # 2. Comparison of Price Distributions for Different Transmission Types
         st.write("### Comparison of Price Distributions for Different Transmission Types")
@@ -241,7 +248,14 @@ def show_main_page():
         plt.xlabel("Transmission Type")
         plt.ylabel("Selling Price")
         st.pyplot(plt)
-        st.write("From the graph, it is evident that cars with automatic transmissions are sold significantly more expensive than manual ones")
+        st.markdown(
+            """
+            **This box plot displays the selling price distribution for cars with Manual and Automatic transmissions. Key observations include:**
+            - Automatic transmission cars are generally sold at significantly higher prices compared to their manual counterparts.
+            - There is a greater distribution of outliers in the automatic segment, suggesting some very high-priced automatic cars.
+            - Manual transmission cars have a more condensed price range, indicating a more consistent pricing trend.
+            """
+        )
         
 
     with st.expander("Hypothesis", expanded=True):
