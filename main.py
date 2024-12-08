@@ -261,6 +261,7 @@ def main_page_input_features():
         km_driven = st.slider("km driven", min_value=0, max_value=1000000, value=50000, step=1)
         fuel = st.selectbox("Fuel type", ("Diesel", "Petrol", "LPG", "CNG"))
         seller_type = st.selectbox("Seller type", ("Individual", "Dealer", "Trustmark Dealer"))
+        seats = st.slider("Seats", min_value=2, max_value=14, value=5, step=1)
 
     with col2:
         transmission = st.selectbox("Transmission", ("Automatic", "Manual"))
@@ -268,7 +269,6 @@ def main_page_input_features():
         mileage = st.slider("Mileage, kmpl", min_value=0, max_value=50, value=18, step=1)
         engine = st.slider("Engine, CC", min_value=500, max_value=3600, value=1000, step=1)
         max_power = st.slider("Max power, bhp", min_value=0, max_value=14, value=7, step=1)
-        seats = st.slider("Seats", min_value=2, max_value=14, value=5, step=1)
 
     translatetion = {
         "Diesel": 1,
