@@ -1,4 +1,4 @@
-### Used car predictions + EDA
+# Used car predictions + EDA
 So, I had a task to analyze a ready dataset and build a predictive model based on it. It was also necessary to place the ready solution on the Streamlint platform.
 
 1. As a ready dataset we chose [data](https://raw.githubusercontent.com/evgpat/edu_stepik_from_idea_to_mvp/main/datasets/cars.csv) on the prices of used cars with different characteristics.
