@@ -9,5 +9,7 @@ So, I had a task to analyze a ready dataset and build a predictive model based o
 4. Finally, a web interface based on the predictive model was implemented - https://elmowx.streamlit.app/ .
 
 main.py - Executive file for Streamlint
+
 model.py - File for building prediction for Streamlint
+
 data - Folder with image file and model file
