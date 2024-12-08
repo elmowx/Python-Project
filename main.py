@@ -197,8 +197,9 @@ def show_main_page():
             - Individual Sellers: The pricing spread is wide, with most prices clustered at the lower end, indicated by several outliers extending above the interquartile range.
             - Dealers: Show a higher median price compared to individuals, with a more concentrated interquartile range suggesting less variability in pricing.
             - Trustmark Dealers: Also have higher median prices than individual sellers, but with fewer extreme outliers compared to the Dealer category.
-            **The statistical test results confirm the hypothesis that petrol cars with automatic transmission sold by dealers have higher prices than those sold by individuals," 
-            "indicating a significant price difference across seller types.**            
+            
+            **The statistical test results confirm the hypothesis that petrol cars with automatic transmission sold by dealers have higher prices than those sold by individuals,** 
+            **indicating a significant price difference across seller types.**            
             """
         )
 
