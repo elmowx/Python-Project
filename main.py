@@ -210,7 +210,7 @@ def main_page_input_features():
     col1, col2 = st.columns(2)
 
     with col1:
-        name = st.text_input("Name")
+        name = ""
         year = st.slider("Year of manufacture", min_value=1950, max_value=2023, value=2015, step=1)
         km_driven = st.slider("km driven", min_value=0, max_value=1000000, value=50000, step=1)
         fuel = st.selectbox("Fuel type", ("Diesel", "Petrol", "LPG", "CNG"))
