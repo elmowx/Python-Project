@@ -116,7 +116,12 @@ def show_main_page():
             ax.pie(x_fuel, labels=types_fuel, autopct="%1.1f%%", startangle=90)
             ax.set_title("Fuel Type Distribution")
             st.pyplot(f)
-            st.write("### Fuel Type Distribution")
+            st.write(
+                "The pie chart illustrates the distribution of fuel types in the dataset." 
+                "Diesel is the most prevalent, accounting for 54.2% of the vehicles."
+                "Petrol follows at 44.6%. CNG and LPG are much less common, each making up a small fraction of the total at 0.5% and 0.7%, respectively." 
+                "This chart highlights the dominance of diesel and petrol fuel types."
+            )
 
         with col2:
             st.write("### Seller Type Distribution")
