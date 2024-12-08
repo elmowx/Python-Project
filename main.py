@@ -191,6 +191,7 @@ def show_main_page():
                 "The hypothesis is confirmed: petrol cars with automatic transmission, sold by dealers, have a higher price than those sold by individuals.")
         else:
             st.warning("The hypothesis is refuted: there is no statistically significant difference in selling prices between the groups.")
+        st.write("### Dataset for Model Training")
 
     st.write("### Dataset for Model Training")
     st.write("[owner, fuel, seller_type, transmission, name] -> to digits\n")
