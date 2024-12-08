@@ -153,6 +153,18 @@ def show_main_page():
                 "This chart highlights the dominance of diesel and petrol fuel types."
             )
 
+            
+            st.write("### Distribution of the number of previous owners")
+            owner_types = df_v1["owner"].unique()
+            owner_counts = df_v1["owner"].value_counts()
+            f, ax = plt.subplots(figsize=(5, 5))
+            ax.pie(owner_counts, labels=owner_types, autopct="%1.1f%%", startangle=0)
+            ax.set_title("Distribution of the number of previous owners")
+            st.pyplot(f)
+            st.write(
+                "This pie chart illustrates the distribution of cars based on the number of previous owners." 
+                "The chart visually emphasizes that a significant majority of the cars are from their first or second owners.")
+
         with col2:
             st.write("### Seller Type Distribution")
             types = df_v1["seller_type"].unique()
@@ -196,6 +208,21 @@ def show_main_page():
                 "The pie chart shows the distribution of transmission types among the vehicles. Manual transmissions are overwhelmingly popular, comprising 87.1% of the cars." 
                 "Automatic transmissions make up 12.9%. This suggests a strong preference for manual transmission in the dataset."
             )
+                    
+            st.write("### Distribution of car models (Top 30)")
+            models = df_v1["Model"].unique()[:30]
+            model_counts = df_v1["Model"].value_counts()[:30]
+            f, ax = plt.subplots(figsize=(10, 5))
+            sns.barplot(x=models, y=model_counts.values, ax=ax)
+            ax.set_xlabel("Car Model (Top 30)")
+            ax.set_ylabel("Count")
+            ax.set_xticklabels(models, rotation=75)
+            ax.set_title("Most Common Car Models (Top 30)")
+            st.pyplot(f)
+            st.write(
+                "This bar plot shows the top 30 car models based on the quantity available in the dataset."
+                "The plot highlights the substantial popularity of the Swift model, with a sharp decline in numbers for other models. The x-axis labels are rotated for clarity."
+                    )
 
         st.write("### Comparison of Price Distributions for Different Fuel Types")
         plt.figure(figsize=(10, 5))
@@ -215,6 +242,7 @@ def show_main_page():
         plt.ylabel("Selling Price")
         st.pyplot(plt)
         st.write("From the graph, it is evident that cars with automatic transmissions are sold significantly more expensive than manual ones")
+        
 
     with st.expander("Hypothesis", expanded=True):
         st.write("### Hypothesis: Petrol cars with automatic transmission, sold by dealers, have a higher price than those sold by individuals")
