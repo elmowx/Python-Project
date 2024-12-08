@@ -73,9 +73,33 @@ def show_main_page():
     
     st.write("### Main numerical characteristics")
     st.write(df.describe())
-    
+    st.markdown(
+        """
+        **Describes key statistics for numerical columns.**
+        - year: Ranges from 1983 to 2020, with a mean of 2013.82.
+        - selling_price: Varies from 29,999 to 10 million, having a mean price of 639,512.
+        - km_driven: Goes from 1,000 to about 2.36 million kilometers.
+        - mileage: The mean is 19.52 km/l, with no recorded mileage for some entries (min = 0).
+        - engine: Ranges from 624 cc to 3604 cc, averaging 1458.33 cc.
+        - max_power: Extends from 0 to 400 (unknown unit), with an average of 91.5.
+        - seats: Mostly between 2 and 14, with a mean of 5.42, although some data is missing.
+        """
+    )
+
     st.write("### Categorical Characteristics")
     st.write(df.describe(include='object'))
+    st.markdown(
+        """
+        **Summarizes categorical data.**
+        - Company: 30 unique car companies; most frequent is Maruti (2126 entries).
+        - Model: 206 distinct models, with "Swift" being the most common (852 entries).
+        - fuel: 4 types; Diesel is the most used.
+        - seller_type: 3 types, mainly Individual sellers (5186 entries).
+        - transmission: Primarily Manual (5924 entries), with 2 types.
+        - owner: Typically First Owner (4809 entries).
+        - torque: 419 unique values; most frequent is "190Nm@2000rpm" (468 entries).
+        """
+    )
 
     with st.expander("EDA", expanded=True):
         col1, col2 = st.columns(2)
