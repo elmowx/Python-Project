@@ -191,13 +191,16 @@ def show_main_page():
                 "The hypothesis is confirmed: petrol cars with automatic transmission, sold by dealers, have a higher price than those sold by individuals.")
         else:
             st.warning("The hypothesis is refuted: there is no statistically significant difference in selling prices between the groups.")
-        st.write(
-            "The box plot displays the distribution of selling prices for petrol cars with automatic transmissions categorized by seller type: Individual, Dealer, and Trustmark Dealer."
-            "- Individual Sellers: The pricing spread is wide, with most prices clustered at the lower end, indicated by several outliers extending above the interquartile range."
-            "- Dealers: Show a higher median price compared to individuals, with a more concentrated interquartile range suggesting less variability in pricing."
-            "- Trustmark Dealers: Also have higher median prices than individual sellers, but with fewer extreme outliers compared to the Dealer category."
-            "The statistical test results confirm the hypothesis that petrol cars with automatic transmission sold by dealers have higher prices than those sold by individuals," 
-            "indicating a significant price difference across seller types.")
+        st.markdown(
+            """
+            **The box plot displays the distribution of selling prices for petrol cars with automatic transmissions categorized by seller type: Individual, Dealer, and Trustmark Dealer.**
+            - Individual Sellers: The pricing spread is wide, with most prices clustered at the lower end, indicated by several outliers extending above the interquartile range.
+            - Dealers: Show a higher median price compared to individuals, with a more concentrated interquartile range suggesting less variability in pricing.
+            - Trustmark Dealers: Also have higher median prices than individual sellers, but with fewer extreme outliers compared to the Dealer category.
+            **The statistical test results confirm the hypothesis that petrol cars with automatic transmission sold by dealers have higher prices than those sold by individuals," 
+            "indicating a significant price difference across seller types.**            
+            """
+        )
 
     st.write("### Dataset for Model Training")
     st.write("[owner, fuel, seller_type, transmission, name] -> to digits\n")
